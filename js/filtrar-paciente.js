@@ -7,9 +7,8 @@ input.addEventListener("input", function(){
     pacientes.forEach(function(paciente){
 
        if(continuarAhPesquisar.length >0){
-            let nomeTd = paciente.querySelector(".info-nome");
-            let nome = nomeTd.textContent;
-            let expressao = new RegExp(continuarAhPesquisar, 'i');
+            let nome = paciente.querySelector(".info-nome").textContent;
+            let expressao = new RegExp(continuarAhPesquisar, "i");
             if(expressao.test(nome)){
                 paciente.classList.remove("invisivel");
             }else{
@@ -18,7 +17,6 @@ input.addEventListener("input", function(){
         }else{
             paciente.classList.remove("invisivel");
         }
-
     });
 
 });
