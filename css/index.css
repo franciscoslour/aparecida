@@ -71,6 +71,7 @@ th{
 }
 
 label{
+	font-weight: bold;
 	color: #555;
 	display: block;
 	margin-bottom: .2em;
@@ -139,4 +140,14 @@ button[disabled=disabled], button:disabled {
 
 #dados-paciente-invalido{
 	color: red;
+}
+
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+
+
+#filtrar-nome{
+	margin-bottom: 20px;
 }

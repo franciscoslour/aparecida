@@ -61,13 +61,13 @@ function validarDadosDoPaciente(paciente) {
         erros.push("Nome não pode estar em branco");
     }
 
-    if (paciente.peso.length == 0) {
+    if (estaVazio(paciente.peso)) {
         erros.push("O peso não pode estar em branco");
     } else if (!validarPeso(paciente.peso)) {
         erros.push("Peso inválido !");
     }
 
-    if (paciente.altura.length == 0) {
+    if (estaVazio(paciente.altura)) {
         erros.push("Altura não pode estar em branco");
     } else if (!validarAltura(paciente.altura)) {
         erros.push("Altura inválida !");
@@ -88,6 +88,10 @@ function mostrarErro(erros) {
         item.textContent = erro;
         lista.appendChild(item);
     });
+}
+
+function estaVazio(valor){
+    return valor.length == 0;
 }
 
 
