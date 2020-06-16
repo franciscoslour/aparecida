@@ -1,6 +1,5 @@
 var input = document.querySelector("#filtrar-nome");
 
-
 input.addEventListener("input", function(){
     let continuarAhPesquisar = input.value;
     let pacientes = document.querySelectorAll(".paciente");

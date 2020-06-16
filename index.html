@@ -39,6 +39,7 @@
 				</div>
 		
 				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+			
 			</form>
 		</section>
 
@@ -47,6 +48,7 @@
 				<h2>Meus pacientes</h2>
 				<label class="descricao-label" for="iltrar-nome">Pesquisar paciente:</label>
 				<input type="text" name="filtro" id="filtrar-nome" placeholder="Introduza o nome">
+				<span id="erro-requisicao" class="invisivel"></span>
 				<table>
 					<thead>
 						<tr>
@@ -93,7 +95,8 @@
 						</tr>
 					</tbody>
 				</table>
-
+				<button id="buscar-paciente" class="botao bto-principal">Buscar</button>
+			
 			</section>
 		</main>
 
@@ -101,6 +104,7 @@
 		<script src="/js/calcula-imc.js"></script>
 		<script src="/js/remover-paciente.js"></script>
 		<script src="/js/filtrar-paciente.js"></script>
+		<script src="/js/buscar-paciente.js"></script>
 
 	</body>
 </html>

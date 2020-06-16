@@ -11,8 +11,7 @@ botao.addEventListener("click", function (event) {
         return;
     }
 
-    let pacienteTr = montarTrNaTabela(paciente);
-    adicionarTrNaTabela(pacienteTr);
+    adicionarTrNaTabela(paciente);
     mostrarErro(erros);
     form.reset();
 
@@ -27,6 +26,12 @@ function obterInformacoesDoPacienteNoFormulario(form) {
         imc: calcularIMC(form.peso.value, form.altura.value)
     }
     return paciente;
+}
+
+function adicionarTrNaTabela(paciente) {
+    let pacienteTr = montarTrNaTabela(paciente);
+    let tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
 }
 
 function montarTrNaTabela(paciente) {
@@ -47,11 +52,6 @@ function montarTd(classe, valorDaTd) {
     td.classList.add(classe);
     td.textContent = valorDaTd;
     return td;
-}
-
-function adicionarTrNaTabela(pacienteTr) {
-    let tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
 }
 
 function validarDadosDoPaciente(paciente) {
@@ -90,7 +90,7 @@ function mostrarErro(erros) {
     });
 }
 
-function estaVazio(valor){
+function estaVazio(valor) {
     return valor.length == 0;
 }
 
